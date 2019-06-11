@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".XmlyHomeActivity">
+
+    <ImageView
+        android:id="@+id/current"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/target"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/arc_bg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:alpha="0"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/current"
+        app:layout_constraintTop_toTopOf="@id/current" />
+
+    <View
+        android:id="@+id/top_bar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/topbar_title_layout"
+        app:layout_constraintTop_toTopOf="@+id/topbar_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/topbar_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp" />
+
+</android.support.constraint.ConstraintLayout>
